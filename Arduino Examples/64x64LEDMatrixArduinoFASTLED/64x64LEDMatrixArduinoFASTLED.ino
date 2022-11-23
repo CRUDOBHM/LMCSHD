@@ -31,7 +31,7 @@ void serialEvent() {
       Serial.write(0x06); //acknowledge
       break;
 
-    case 0x42:
+    case 0x42:{
       byte sDat[2] = {0};
       for (int i = 0; i < NUM_LEDS; i++) {
         Serial.readBytes(sDat, 2);
